@@ -63,13 +63,28 @@ if (myFavoriteFoods.length > popularFoods.length) {
 let commonFoods = myFavoriteFoods.filter(food => popularFoods.includes(food));
 console.log("Foods we both like:", commonFoods);
 
-// 8. Create another array shortFoodNames for foods 6 characters or shorter.
+// ----------------------
+// Problem 8: Use a loop to count foods that contain the letter 'a'
+// ----------------------
+let count = 0;
+for (let food of popularFoods) {
+  if (food.includes("a")) {
+    count++;
+  }
+}
+console.log("Number of popular foods with 'a' in the name:", count);
 
+// ----------------------
+// Problem 9: Create a function that returns a personalized recommendation
+// ----------------------
+function recommendFood(name) {
+  let randomFood = popularFoods[Math.floor(Math.random() * popularFoods.length)];
+  return `${name}, you should try ${randomFood} today!`;
+}
+console.log(recommendFood("Zoie"));
 
-
-// 9. Print both arrays and compare:
-// "There are more long-named foods." OR "There are more short-named foods."
-
-
-// 10. STRETCH: Find the longest food name and print:
-// "The longest food name in the list is ______ with ___ characters."
+// ----------------------
+// Problem 10: Sort and log both arrays alphabetically
+// ----------------------
+console.log("My favorite foods (alphabetical):", [...myFavoriteFoods].sort());
+console.log("Popular foods (alphabetical):", [...popularFoods].sort());
