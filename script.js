@@ -21,43 +21,47 @@ for (let food of myFavoriteFoods) {
 
 
 
-// 3. Print out the rating for each food with a ranking like:
-// "My #1 favorite food is Ramen" (copy/paste for all items)
-// "My #2 favorite food is Sushi"
-// ...etc.
+// ----------------------
+// Problem 3: Log the first 5 popular foods
+// ----------------------
+console.log("Top 5 popular foods are:");
+for (let i = 0; i < 5; i++) {
+  console.log(popularFoods[i]);
+}
 
+// ----------------------
+// Problem 4: Write a function to check if a food is in your list
+// ----------------------
+function isMyFavorite(food) {
+  if (myFavoriteFoods.includes(food)) {
+    return `${food} is one of my favorites!`;
+  } else {
+    return `${food} is not in my top favorites.`;
+  }
+}
+console.log(isMyFavorite("pizza"));
+console.log(isMyFavorite("sushi"));
 
+// ----------------------
+// Problem 5: Use conditionals to filter foods with names longer than 6 letters
+// ----------------------
+let longNamedFoods = popularFoods.filter(food => food.length > 6);
+console.log("Foods with long names:", longNamedFoods);
 
+// ----------------------
+// Problem 6: Compare array lengths
+// ----------------------
+if (myFavoriteFoods.length > popularFoods.length) {
+  console.log("I listed more favorites than the popular list.");
+} else {
+  console.log("The popular food list is longer than my list.");
+}
 
-
-// 4a. Create a function printFoodRecommendation(foodName) that prints out the following for the foodName provided
-    // "Have you ever tried ____?"
-    // "I always recommend ____ to friends."
-    // "Trust me — ____ is delicious."
-
-
-
-
-// 4b. Call the function at least 3 times
-
-
-
-// Here's a list of 50 friends' favorite foods:
-let friendFavorites = [
-    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
-  ];
-
-// 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
-
-
-
-// 6. Store the result in an array called foodsWithA. Print out the array.
-
-
-
-// 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-
-
+// ----------------------
+// Problem 7: Find common foods between my list and popular list
+// ----------------------
+let commonFoods = myFavoriteFoods.filter(food => popularFoods.includes(food));
+console.log("Foods we both like:", commonFoods);
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
 
