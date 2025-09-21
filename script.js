@@ -1,11 +1,23 @@
-console.log("Hello World!");
-// 1. Create an array called favoriteFoods with at least 6 foods you love.
+// Taste Tracker Example
+// Solutions to 10 problems using arrays, functions, loops, and conditionals.
 
+// ----------------------
+// Problem 1: Create arrays to store food data
+// ----------------------
+let myFavoriteFoods = ["chicken", "tacos", "ramen", "burgers", "ice cream"];
+let popularFoods = [
+  "pizza", "pasta", "sushi", "burgers", "tacos", "ramen", "fried chicken",
+  "salad", "sandwich", "steak", "pancakes", "curry", "dumplings", "burrito",
+  "hot dog", "donuts", "pho", "bagel", "lasagna", "ramen"
+];
 
-
-// 2. Loop through the list and print: "One of my favorite foods is ______."
-
-
+// ----------------------
+// Problem 2: Log your favorite foods
+// ----------------------
+console.log("My favorite foods are:");
+for (let food of myFavoriteFoods) {
+  console.log(food);
+}
 
 
 
